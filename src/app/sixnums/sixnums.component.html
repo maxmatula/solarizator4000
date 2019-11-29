@@ -1,0 +1,25 @@
+<div class="mt-2">
+  <h4>Witaj w loterii SIXNUMS!</h4>
+  <p class="desc">coś jak lotto tylko lepsze bo nie trzeba czekać na wynik, <br>
+    ale też nic się nie da wygrać xD</p>
+  <div class="mb-2">
+    <div>
+      <p>Iteracja: {{iteration}}</p>
+    </div>
+    <h3>Szóstka trafiona <span class="badge badge-success">{{winCount}}</span> razy!</h3>
+    <br>
+    <div class="win-section">
+        <p class="wincount">Jedynka: <span class="badge badge-danger">{{winmodel.ones}}</span> | Dwójka: <span
+          class="badge badge-danger">{{winmodel.twos}}</span> | Trójka: <span
+          class="badge badge-danger">{{winmodel.threes}}</span></p>
+      <p class="wincount">Czwórka: <span class="badge badge-danger">{{winmodel.fours}}</span> | Piątka: <span
+          class="badge badge-danger">{{winmodel.fives}}</span></p>
+    </div>
+  </div>
+  <p>How many times you want to play? <input type="number" min=1 max=50000 value="1" name="howManyPlay"
+      [(ngModel)]="howManyPlay"></p>
+  <button class="btn btn-sm btn-warning mr-5" (click)="clear()">WYCZYŚĆ</button>
+  <button class="btn btn-lg btn-success" (click)="lotto(howManyPlay)">GRAJ!</button>
+
+  <br>
+</div>

@@ -1,0 +1,42 @@
+.awesome {
+  color: #fff;
+  font-size: 45px;
+  font-weight: bold;
+  animation: colorchange 20s infinite alternate;
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    color: white;
+  }
+  10% {
+    color: #d294ec;
+  }
+  20% {
+    color: #f1d743;
+  }
+  30% {
+    color: #d35400;
+  }
+  40% {
+    color: greenyellow;
+  }
+  50% {
+    color: red;
+  }
+  60% {
+    color: white;
+  }
+  70% {
+    color: #2980b9;
+  }
+  80% {
+    color: #f1c40f;
+  }
+  90% {
+    color: #2980b9;
+  }
+  100% {
+    color: pink;
+  }
+}
