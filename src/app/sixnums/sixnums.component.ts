@@ -16,6 +16,8 @@ export class SixnumsComponent implements OnInit {
   iteration = 1;
   howManyPlay = 1;
   winmodel: Winmodel;
+  availiableNumbersUser = [];
+  availiableNumbersLotto = [];
 
   constructor() {
     this.lottery = new Lottery();
@@ -24,6 +26,7 @@ export class SixnumsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.resetLottoNumbers();
   }
 
   clear() {
@@ -34,12 +37,21 @@ export class SixnumsComponent implements OnInit {
     this.iteration = 0;
   }
 
+  resetLottoNumbers() {
+    this.availiableNumbersUser = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+      16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
+      33, 34, 35, 36, 37, 38, 39, 40];
+    this.availiableNumbersLotto = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+      16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
+      33, 34, 35, 36, 37, 38, 39, 40];
+  }
+
   lotto(times: number) {
     for (let i = 0; i < times; i++) {
       setTimeout(() => {
         let matchCount = 0;
-        this.lottery.userNumbers = this.generateSixnum();
-        this.lottery.lotteryNumbers = this.generateSixnum();
+        this.lottery.userNumbers = this.generateSixnumUser();
+        this.lottery.lotteryNumbers = this.generateSixnumLotto();
         this.lottery.iteration = this.iteration;
 
         this.lottery.lotteryNumbers.forEach(lottNum => {
@@ -77,20 +89,45 @@ export class SixnumsComponent implements OnInit {
         this.lottery.machCount = matchCount;
         this.iteration += 1;
         this.lotteriesHistory.push(this.lottery);
+        this.resetLottoNumbers();
       }, 400);
     }
   }
 
-  private generateNumber() {
+  private generateNumberUser() {
     const num = Math.floor(Math.random() * (this.maxNumber - this.minNumber + 1) + this.minNumber);
-    return num;
+    if (this.availiableNumbersUser.some(x => x === num)) {
+      this.availiableNumbersUser = this.availiableNumbersUser.filter(x => x !== num);
+      return num;
+    } else {
+      this.generateNumberUser();
+    }
   }
 
-  private generateSixnum() {
-    const six = [this.generateNumber(),
-    this.generateNumber(), this.generateNumber(),
-    this.generateNumber(), this.generateNumber(),
-    this.generateNumber()];
+  private generateNumberLotto() {
+    const num = Math.floor(Math.random() * (this.maxNumber - this.minNumber + 1) + this.minNumber);
+    if (this.availiableNumbersLotto.some(x => x === num)) {
+      this.availiableNumbersLotto = this.availiableNumbersLotto.filter(x => x !== num);
+      return num;
+    } else {
+      this.generateNumberUser();
+    }
+  }
+
+  private generateSixnumUser() {
+    const six = [this.generateNumberUser(),
+    this.generateNumberUser(), this.generateNumberUser(),
+    this.generateNumberUser(), this.generateNumberUser(),
+    this.generateNumberUser()];
+
+    return six;
+  }
+
+  private generateSixnumLotto() {
+    const six = [this.generateNumberLotto(),
+    this.generateNumberLotto(), this.generateNumberLotto(),
+    this.generateNumberLotto(), this.generateNumberLotto(),
+    this.generateNumberLotto()];
 
     return six;
   }
