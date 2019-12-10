@@ -13,16 +13,22 @@ export class SixnumsComponent implements OnInit {
   minNumber = 1;
   maxNumber = 40;
   winCount = 0;
-  iteration = 1;
+  iteration = 0;
   howManyPlay = 1;
   winmodel: Winmodel;
   availiableNumbersUser = [];
   availiableNumbersLotto = [];
+  ticketPrice: number;
+  allGamesTicket: number;
+  allTimeWinnings: number;
 
   constructor() {
     this.lottery = new Lottery();
     this.lotteriesHistory = new Array<Lottery>();
     this.winmodel = new Winmodel();
+    this.ticketPrice = 3.00;
+    this.allGamesTicket = 0;
+    this.allTimeWinnings = 0;
   }
 
   ngOnInit() {
@@ -35,6 +41,8 @@ export class SixnumsComponent implements OnInit {
     this.winmodel = new Winmodel();
     this.winCount = 0;
     this.iteration = 0;
+    this.allGamesTicket = 0;
+    this.allTimeWinnings = 0;
   }
 
   resetLottoNumbers() {
@@ -64,6 +72,7 @@ export class SixnumsComponent implements OnInit {
 
         if (matchCount === 6) {
           this.winCount += 1;
+          this.allTimeWinnings += 2000000;
         }
 
         if (matchCount === 1) {
@@ -76,19 +85,23 @@ export class SixnumsComponent implements OnInit {
 
         if (matchCount === 3) {
           this.winmodel.threes += 1;
+          this.allTimeWinnings += 24;
         }
 
         if (matchCount === 4) {
           this.winmodel.fours += 1;
+          this.allTimeWinnings += 268;
         }
 
         if (matchCount === 5) {
           this.winmodel.fives += 1;
+          this.allTimeWinnings += 6510;
         }
 
         this.lottery.machCount = matchCount;
         this.iteration += 1;
         this.lotteriesHistory.push(this.lottery);
+        this.allGamesTicket += this.ticketPrice;
         this.resetLottoNumbers();
       }, 400);
     }
