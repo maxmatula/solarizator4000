@@ -1,14 +1,18 @@
-<div class="mt-2">
-  <h4>Witaj w loterii SIXNUMS!</h4>
-  <p class="desc">coś jak lotto tylko lepsze bo nie trzeba czekać na wynik, <br>
+<div class="mt-5 mb-5">
+  <h2>Witaj w loterii SIXNUMS!</h2>
+  <hr>
+  <p class="desc">coś jak lotto tylko lepsze bo nie trzeba czekać na wynik,
     ale też nic się nie da wygrać xD</p>
-  <div class="mb-2 col-sm-12">
+  <div class="mb-2 col-sm-12 mt-5">
     <div class="row">
-      <div class="col-sm-6 text-center">
+      <div class="col-sm-4 text-center">
         <p>Iteracja: {{iteration}} | Wygrana: <span class="badge badge-success">{{allTimeWinnings}} PLN</span></p>
       </div>
-      <div class="col-sm-6 text-center">
-          <p>Cena losu: {{ticketPrice}} PLN | Na wszystkie losy wydano <span class="badge badge-warning">{{allGamesTicket}} PLN</span></p>
+      <div class="col-sm-4 text-center">
+       <p>Bilans: <span class="badge badge-secondary">{{allTimeWinnings - allGamesTicket}} PLN</span></p>
+      </div>
+      <div class="col-sm-4 text-center">
+          <p>Cena losu: {{ticketPrice}} PLN <br> Na wszystkie losy wydano <span class="badge badge-danger">{{allGamesTicket}} PLN</span></p>
         </div>
     </div>
     <h3>Szóstka trafiona <span class="badge badge-success">{{winCount}}</span> razy!</h3>
