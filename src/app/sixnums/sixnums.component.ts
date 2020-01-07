@@ -32,6 +32,7 @@ export class SixnumsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.clear();
     this.resetLottoNumbers();
   }
 
@@ -58,6 +59,8 @@ export class SixnumsComponent implements OnInit {
     for (let i = 0; i < times; i++) {
       setTimeout(() => {
         let matchCount = 0;
+        this.resetLottoNumbers();
+        this.lottery = new Lottery();
         this.lottery.userNumbers = this.generateSixnumUser();
         this.lottery.lotteryNumbers = this.generateSixnumLotto();
         this.lottery.iteration = this.iteration;
@@ -102,28 +105,28 @@ export class SixnumsComponent implements OnInit {
         this.iteration += 1;
         this.lotteriesHistory.push(this.lottery);
         this.allGamesTicket += this.ticketPrice;
-        this.resetLottoNumbers();
       }, 400);
     }
+    console.log(this.lotteriesHistory);
   }
 
   private generateNumberUser() {
-    const num = Math.floor(Math.random() * (this.maxNumber - this.minNumber + 1) + this.minNumber);
+    const num = Math.floor(Math.random() * 40) + 1;
     if (this.availiableNumbersUser.some(x => x === num)) {
       this.availiableNumbersUser = this.availiableNumbersUser.filter(x => x !== num);
       return num;
     } else {
-      this.generateNumberUser();
+      return this.generateNumberUser();
     }
   }
 
   private generateNumberLotto() {
-    const num = Math.floor(Math.random() * (this.maxNumber - this.minNumber + 1) + this.minNumber);
+    const num = Math.floor(Math.random() * 40) + 1;
     if (this.availiableNumbersLotto.some(x => x === num)) {
       this.availiableNumbersLotto = this.availiableNumbersLotto.filter(x => x !== num);
       return num;
     } else {
-      this.generateNumberLotto();
+      return this.generateNumberLotto();
     }
   }
 
