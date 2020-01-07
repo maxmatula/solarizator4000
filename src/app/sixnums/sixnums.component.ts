@@ -123,7 +123,7 @@ export class SixnumsComponent implements OnInit {
       this.availiableNumbersLotto = this.availiableNumbersLotto.filter(x => x !== num);
       return num;
     } else {
-      this.generateNumberUser();
+      this.generateNumberLotto();
     }
   }
 
