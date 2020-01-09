@@ -6,16 +6,16 @@
   <div class="mb-2 col-sm-12 mt-5">
     <div class="row">
       <div class="col-sm-4 text-center">
-        <p>Iteracja: {{iteration}} | Wygrana: <span class="badge badge-success">{{allTimeWinnings}} HCN</span></p>
+        <p>Iteracja: {{iteration}} | Wygrana: <span class="badge badge-success">{{allTimeWinnings | number}} HCN</span></p>
       </div>
       <div class="col-sm-4 text-center">
-       <p>Bilans: <span class="badge badge-secondary">{{allTimeWinnings - allGamesTicket}} HCN</span></p>
+       <p>Bilans: <span class="badge badge-secondary">{{allTimeWinnings - allGamesTicket | number}} HCN</span></p>
       </div>
       <div class="col-sm-4 text-center">
-          <p>Cena losu: {{ticketPrice}} HCN <br> Na wszystkie losy wydano <span class="badge badge-danger">{{allGamesTicket}} HCN</span></p>
+          <p>Cena losu: {{ticketPrice}} HCN <br> Na wszystkie losy wydano <span class="badge badge-danger">{{allGamesTicket | number}} HCN</span></p>
         </div>
     </div>
-    <h3>Szóstka trafiona <span class="badge badge-success">{{winCount}}</span> razy!</h3>
+    <h3>Szóstka trafiona <span class="badge badge-success">{{winmodel.sixes}}</span> razy!</h3>
     <br>
     <div class="win-section">
       <p class="wincount">Jedynka: <span class="badge badge-danger">{{winmodel.ones}}</span> | Dwójka: <span
@@ -28,5 +28,5 @@
   <p>Ile razy chcesz zagrać? <input type="number" min=1 max=100000 value="1" name="howManyPlay"
       [(ngModel)]="howManyPlay"> <span class="textsmall"> (max. 100 000)</span></p>
   <button class="btn btn-sm btn-warning mr-5" (click)="clear()">WYCZYŚĆ</button>
-  <button class="btn btn-lg btn-success" (click)="lotto(howManyPlay)">GRAJ!</button>
+  <button class="btn btn-lg btn-success" (click)="startLottery(howManyPlay)">GRAJ!</button>
 </div>

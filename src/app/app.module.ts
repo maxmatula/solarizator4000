@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SixnumsComponent } from './sixnums/sixnums.component';
+import { LottoService } from './_services/lotto.service';
 
 @NgModule({
    declarations: [
@@ -14,7 +15,9 @@ import { SixnumsComponent } from './sixnums/sixnums.component';
       BrowserModule,
       FormsModule
    ],
-   providers: [],
+   providers: [
+     LottoService,
+   ],
    bootstrap: [
       AppComponent
    ]

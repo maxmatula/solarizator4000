@@ -4,6 +4,7 @@ export class Winmodel {
   threes: number;
   fours: number;
   fives: number;
+  sixes: number;
 
   constructor() {
     this.ones = 0;
@@ -11,5 +12,6 @@ export class Winmodel {
     this.threes = 0;
     this.fours = 0;
     this.fives = 0;
+    this.sixes = 0;
   }
 }
