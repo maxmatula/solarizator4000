@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container text-center\">\n  <div class=\"col-sm-12\">\n      <app-sixnums></app-sixnums>\n  </div>\n</div>\n"
+module.exports = "<div class=\"container text-center\">\r\n  <div class=\"col-sm-12\">\r\n      <app-sixnums></app-sixnums>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<div class=\"container text-center\">\n  <div class=\"col-sm-1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mt-5 mb-5\">\n  <h2>Witaj w loterii SIXNUMS!</h2>\n  <hr>\n  <p class=\"desc\">WSZELKIE WYGRANE SĄ FIKCYJNE! <br>jest to tylko symulacja gry na 6 liczb aby pokazać\n  jaka jest szansa na wygraną :) <br> HCN = HajsCoin</p>\n  <div class=\"mb-2 col-sm-12 mt-5\">\n    <div class=\"row\">\n      <div class=\"col-sm-4 text-center\">\n        <p>Iteracja: {{iteration}} | Wygrana: <span class=\"badge badge-success\">{{allTimeWinnings}} HCN</span></p>\n      </div>\n      <div class=\"col-sm-4 text-center\">\n       <p>Bilans: <span class=\"badge badge-secondary\">{{allTimeWinnings - allGamesTicket}} HCN</span></p>\n      </div>\n      <div class=\"col-sm-4 text-center\">\n          <p>Cena losu: {{ticketPrice}} HCN <br> Na wszystkie losy wydano <span class=\"badge badge-danger\">{{allGamesTicket}} HCN</span></p>\n        </div>\n    </div>\n    <h3>Szóstka trafiona <span class=\"badge badge-success\">{{winCount}}</span> razy!</h3>\n    <br>\n    <div class=\"win-section\">\n      <p class=\"wincount\">Jedynka: <span class=\"badge badge-danger\">{{winmodel.ones}}</span> | Dwójka: <span\n          class=\"badge badge-danger\">{{winmodel.twos}}</span> | Trójka: <span\n          class=\"badge badge-danger\">{{winmodel.threes}}</span></p>\n      <p class=\"wincount\">Czwórka: <span class=\"badge badge-danger\">{{winmodel.fours}}</span> | Piątka: <span\n          class=\"badge badge-danger\">{{winmodel.fives}}</span></p>\n    </div>\n  </div>\n  <p>Ile razy chcesz zagrać? <input type=\"number\" min=1 max=100000 value=\"1\" name=\"howManyPlay\"\n      [(ngModel)]=\"howManyPlay\"> <span class=\"textsmall\"> (max. 100 000)</span></p>\n  <button class=\"btn btn-sm btn-warning mr-5\" (click)=\"clear()\">WYCZYŚĆ</button>\n  <button class=\"btn btn-lg btn-success\" (click)=\"lotto(howManyPlay)\">GRAJ!</button>\n</div>\n"
+module.exports = "<div class=\"mt-5 mb-5\">\r\n  <h2>Witaj w loterii SIXNUMS!</h2>\r\n  <hr>\r\n  <p class=\"desc\">WSZELKIE WYGRANE SĄ FIKCYJNE! <br>jest to tylko symulacja gry na 6 liczb aby pokazać\r\n    jaka jest szansa na wygraną :) <br> HCN = HajsCoin</p>\r\n  <div class=\"mb-2 col-sm-12 mt-5\">\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-4 text-center\">\r\n        <p>Iteracja: {{iteration}} | Wygrana: <span class=\"badge badge-success\">{{allTimeWinnings | number}} HCN</span>\r\n        </p>\r\n      </div>\r\n      <div class=\"col-sm-4 text-center\">\r\n        <p>Bilans: <span class=\"badge badge-secondary\">{{allTimeWinnings - allGamesTicket | number}} HCN</span></p>\r\n      </div>\r\n      <div class=\"col-sm-4 text-center\">\r\n        <p>Cena losu: {{ticketPrice}} HCN <br> Na wszystkie losy wydano <span\r\n            class=\"badge badge-danger\">{{allGamesTicket | number}} HCN</span></p>\r\n      </div>\r\n    </div>\r\n    <div class=\"win-section2\">\r\n      <h3>Szóstka trafiona <span class=\"badge badge-success\">{{winmodel.sixes}}</span> razy!</h3>\r\n    </div>\r\n    <div class=\"win-section\">\r\n      <p class=\"wincount\">Jedynka: <span class=\"badge badge-danger\">{{winmodel.ones}}</span> | Dwójka: <span\r\n          class=\"badge badge-danger\">{{winmodel.twos}}</span> | Trójka: <span\r\n          class=\"badge badge-danger\">{{winmodel.threes}}</span> | Czwórka: <span class=\"badge badge-danger\">{{winmodel.fours}}</span> | Piątka: <span\r\n          class=\"badge badge-danger\">{{winmodel.fives}}</span></p>\r\n    </div>\r\n  </div>\r\n  <p>Ile razy chcesz zagrać?  <input type=\"number\" min=1 max=100000 value=\"1\" name=\"howManyPlay\" [(ngModel)]=\"howManyPlay\" class=\"form-control-sm\"\r\n    disabled readonly> <span class=\"textsmall\"> (max. 100 000)</span></p>\r\n    <div class=\"btn-group mb-3 fkd\">\r\n      <button class=\"btn btn-sm btn-secondary\" (click)=\"howManyPlay = 1\">1</button>\r\n      <button class=\"btn btn-sm btn-secondary\" (click)=\"howManyPlay = 100\">100</button>\r\n      <button class=\"btn btn-sm btn-secondary\" (click)=\"howManyPlay = 1000\">1 000</button>\r\n      <button class=\"btn btn-sm btn-secondary\" (click)=\"howManyPlay = 10000\">10 000</button>\r\n      <button class=\"btn btn-sm btn-secondary\" (click)=\"howManyPlay = 100000\">100 000</button>\r\n    </div>\r\n  <br>\r\n  <div class=\"btn-group fkc\">\r\n    <button class=\"btn btn-lg btn-warning\" (click)=\"clear()\">WYCZYŚĆ</button>\r\n    <button class=\"btn btn-lg btn-success\" (click)=\"startLottery(howManyPlay)\"> --- GRAJ ---</button>\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -78,8 +78,79 @@ class Winmodel {
         this.threes = 0;
         this.fours = 0;
         this.fives = 0;
+        this.sixes = 0;
     }
 }
+
+
+/***/ }),
+
+/***/ "./src/app/_services/lotto.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/_services/lotto.service.ts ***!
+  \********************************************/
+/*! exports provided: LottoService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LottoService", function() { return LottoService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let LottoService = class LottoService {
+    constructor() { }
+    generateSixNumbersFromFourty() {
+        return [...Array(39).keys()]
+            .map(x => x + 1)
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 6);
+    }
+    getNumbersMatch(lottoNumbers, userNumbers) {
+        return lottoNumbers.filter(x => userNumbers.includes(x)).length;
+    }
+    getPriceFromMatch(match) {
+        switch (match) {
+            case 1: return 0;
+            case 2: return 0;
+            case 3: return 24;
+            case 4: return 268;
+            case 5: return 6510;
+            case 6: return 2000000;
+        }
+        return 0;
+    }
+    addWinmodelWinnings(match, winmodel) {
+        switch (match) {
+            case 1:
+                winmodel.ones += 1;
+                break;
+            case 2:
+                winmodel.twos += 1;
+                break;
+            case 3:
+                winmodel.threes += 1;
+                break;
+            case 4:
+                winmodel.fours += 1;
+                break;
+            case 5:
+                winmodel.fives += 1;
+                break;
+            case 6:
+                winmodel.sixes += 1;
+                break;
+        }
+        return 0;
+    }
+};
+LottoService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], LottoService);
+
 
 
 /***/ }),
@@ -142,6 +213,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _sixnums_sixnums_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sixnums/sixnums.component */ "./src/app/sixnums/sixnums.component.ts");
+/* harmony import */ var _services_lotto_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_services/lotto.service */ "./src/app/_services/lotto.service.ts");
+
 
 
 
@@ -160,7 +233,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]
         ],
-        providers: [],
+        providers: [
+            _services_lotto_service__WEBPACK_IMPORTED_MODULE_6__["LottoService"],
+        ],
         bootstrap: [
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
         ]
@@ -178,7 +253,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".wincount {\r\n  font-size: 1.2rem;\r\n}\r\n\r\n.win-section {\r\n  border: 1px solid  rgb(250, 149, 208);\r\n  padding: 15px;\r\n  width: 50%;\r\n  margin: 0 auto;\r\n  background: rgb(14, 1, 12);\r\n}\r\n\r\n.desc {\r\n  font-size: .9rem;\r\n  font-style: italic;\r\n}\r\n\r\n.textsmall {\r\n  font-weight: 100;\r\n  font-size: .8rem;\r\n  font-style: italic;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2l4bnVtcy9zaXhudW1zLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxxQ0FBcUM7RUFDckMsYUFBYTtFQUNiLFVBQVU7RUFDVixjQUFjO0VBQ2QsMEJBQTBCO0FBQzVCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsa0JBQWtCO0FBQ3BCIiwiZmlsZSI6InNyYy9hcHAvc2l4bnVtcy9zaXhudW1zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud2luY291bnQge1xyXG4gIGZvbnQtc2l6ZTogMS4ycmVtO1xyXG59XHJcblxyXG4ud2luLXNlY3Rpb24ge1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkICByZ2IoMjUwLCAxNDksIDIwOCk7XHJcbiAgcGFkZGluZzogMTVweDtcclxuICB3aWR0aDogNTAlO1xyXG4gIG1hcmdpbjogMCBhdXRvO1xyXG4gIGJhY2tncm91bmQ6IHJnYigxNCwgMSwgMTIpO1xyXG59XHJcblxyXG4uZGVzYyB7XHJcbiAgZm9udC1zaXplOiAuOXJlbTtcclxuICBmb250LXN0eWxlOiBpdGFsaWM7XHJcbn1cclxuXHJcbi50ZXh0c21hbGwge1xyXG4gIGZvbnQtd2VpZ2h0OiAxMDA7XHJcbiAgZm9udC1zaXplOiAuOHJlbTtcclxuICBmb250LXN0eWxlOiBpdGFsaWM7XHJcbn1cclxuIl19 */"
+module.exports = ".wincount {\r\n  font-size: 1.4rem;\r\n}\r\n\r\n.win-section {\r\n  border: 1px solid  rgb(250, 149, 208);\r\n  padding: 15px;\r\n  width: 100%;\r\n  margin: 0 auto;\r\n  background: rgb(14, 1, 12);\r\n}\r\n\r\n.win-section2 {\r\n  border: 1px solid  rgb(250, 149, 208);\r\n  border-bottom: none;\r\n  padding: 15px;\r\n  width: 100%;\r\n  margin: 0 auto;\r\n  background: rgb(14, 1, 12);\r\n}\r\n\r\n.desc {\r\n  font-size: .9rem;\r\n  font-style: italic;\r\n}\r\n\r\n.textsmall {\r\n  font-weight: 100;\r\n  font-size: .8rem;\r\n  font-style: italic;\r\n}\r\n\r\n.form-control-sm {\r\n  border-radius: 0;\r\n  border: 1px solid  rgb(250, 149, 208);\r\n}\r\n\r\ninput:disabled {\r\n  background: rgb(14, 1, 12);\r\n  color: white;\r\n}\r\n\r\n.fkc .btn {\r\n  font-weight: 700;\r\n  color: rgb(14, 1, 12);\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2l4bnVtcy9zaXhudW1zLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxxQ0FBcUM7RUFDckMsYUFBYTtFQUNiLFdBQVc7RUFDWCxjQUFjO0VBQ2QsMEJBQTBCO0FBQzVCOztBQUVBO0VBQ0UscUNBQXFDO0VBQ3JDLG1CQUFtQjtFQUNuQixhQUFhO0VBQ2IsV0FBVztFQUNYLGNBQWM7RUFDZCwwQkFBMEI7QUFDNUI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGdCQUFnQjtFQUNoQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIscUNBQXFDO0FBQ3ZDOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixxQkFBcUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9zaXhudW1zL3NpeG51bXMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi53aW5jb3VudCB7XHJcbiAgZm9udC1zaXplOiAxLjRyZW07XHJcbn1cclxuXHJcbi53aW4tc2VjdGlvbiB7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgIHJnYigyNTAsIDE0OSwgMjA4KTtcclxuICBwYWRkaW5nOiAxNXB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1hcmdpbjogMCBhdXRvO1xyXG4gIGJhY2tncm91bmQ6IHJnYigxNCwgMSwgMTIpO1xyXG59XHJcblxyXG4ud2luLXNlY3Rpb24yIHtcclxuICBib3JkZXI6IDFweCBzb2xpZCAgcmdiKDI1MCwgMTQ5LCAyMDgpO1xyXG4gIGJvcmRlci1ib3R0b206IG5vbmU7XHJcbiAgcGFkZGluZzogMTVweDtcclxuICB3aWR0aDogMTAwJTtcclxuICBtYXJnaW46IDAgYXV0bztcclxuICBiYWNrZ3JvdW5kOiByZ2IoMTQsIDEsIDEyKTtcclxufVxyXG5cclxuLmRlc2Mge1xyXG4gIGZvbnQtc2l6ZTogLjlyZW07XHJcbiAgZm9udC1zdHlsZTogaXRhbGljO1xyXG59XHJcblxyXG4udGV4dHNtYWxsIHtcclxuICBmb250LXdlaWdodDogMTAwO1xyXG4gIGZvbnQtc2l6ZTogLjhyZW07XHJcbiAgZm9udC1zdHlsZTogaXRhbGljO1xyXG59XHJcblxyXG4uZm9ybS1jb250cm9sLXNtIHtcclxuICBib3JkZXItcmFkaXVzOiAwO1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkICByZ2IoMjUwLCAxNDksIDIwOCk7XHJcbn1cclxuXHJcbmlucHV0OmRpc2FibGVkIHtcclxuICBiYWNrZ3JvdW5kOiByZ2IoMTQsIDEsIDEyKTtcclxuICBjb2xvcjogd2hpdGU7XHJcbn1cclxuXHJcbi5ma2MgLmJ0biB7XHJcbiAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICBjb2xvcjogcmdiKDE0LCAxLCAxMik7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -196,19 +271,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _models_Lottery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_models/Lottery */ "./src/app/_models/Lottery.ts");
 /* harmony import */ var _models_winmodel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../_models/winmodel */ "./src/app/_models/winmodel.ts");
+/* harmony import */ var _services_lotto_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../_services/lotto.service */ "./src/app/_services/lotto.service.ts");
+
 
 
 
 
 let SixnumsComponent = class SixnumsComponent {
-    constructor() {
-        this.minNumber = 1;
-        this.maxNumber = 40;
-        this.winCount = 0;
+    constructor(lottoService) {
+        this.lottoService = lottoService;
         this.iteration = 0;
         this.howManyPlay = 1;
-        this.availiableNumbersUser = [];
-        this.availiableNumbersLotto = [];
         this.lottery = new _models_Lottery__WEBPACK_IMPORTED_MODULE_2__["Lottery"]();
         this.lotteriesHistory = new Array();
         this.winmodel = new _models_winmodel__WEBPACK_IMPORTED_MODULE_3__["Winmodel"]();
@@ -218,106 +291,41 @@ let SixnumsComponent = class SixnumsComponent {
     }
     ngOnInit() {
         this.clear();
-        this.resetLottoNumbers();
     }
     clear() {
         this.lottery = new _models_Lottery__WEBPACK_IMPORTED_MODULE_2__["Lottery"]();
         this.lotteriesHistory = new Array();
         this.winmodel = new _models_winmodel__WEBPACK_IMPORTED_MODULE_3__["Winmodel"]();
-        this.winCount = 0;
         this.iteration = 0;
         this.allGamesTicket = 0;
         this.allTimeWinnings = 0;
     }
-    resetLottoNumbers() {
-        this.availiableNumbersUser = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-            16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
-            33, 34, 35, 36, 37, 38, 39, 40];
-        this.availiableNumbersLotto = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-            16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
-            33, 34, 35, 36, 37, 38, 39, 40];
-    }
-    lotto(times) {
-        for (let i = 0; i < times; i++) {
-            setTimeout(() => {
-                let matchCount = 0;
-                this.resetLottoNumbers();
-                this.lottery = new _models_Lottery__WEBPACK_IMPORTED_MODULE_2__["Lottery"]();
-                this.lottery.userNumbers = this.generateSixnumUser();
-                this.lottery.lotteryNumbers = this.generateSixnumLotto();
-                this.lottery.iteration = this.iteration;
-                this.lottery.lotteryNumbers.forEach(lottNum => {
-                    this.lottery.userNumbers.forEach(usrNum => {
-                        if (lottNum === usrNum) {
-                            matchCount += 1;
-                        }
-                    });
-                });
-                if (matchCount === 6) {
-                    this.winCount += 1;
-                    this.allTimeWinnings += 2000000;
-                }
-                if (matchCount === 1) {
-                    this.winmodel.ones += 1;
-                }
-                if (matchCount === 2) {
-                    this.winmodel.twos += 1;
-                }
-                if (matchCount === 3) {
-                    this.winmodel.threes += 1;
-                    this.allTimeWinnings += 24;
-                }
-                if (matchCount === 4) {
-                    this.winmodel.fours += 1;
-                    this.allTimeWinnings += 268;
-                }
-                if (matchCount === 5) {
-                    this.winmodel.fives += 1;
-                    this.allTimeWinnings += 6510;
-                }
-                this.lottery.machCount = matchCount;
-                this.iteration += 1;
-                this.lotteriesHistory.push(this.lottery);
-                this.allGamesTicket += this.ticketPrice;
-            }, 400);
-        }
-        console.log(this.lotteriesHistory);
-    }
-    generateNumberUser() {
-        const num = Math.floor(Math.random() * 40) + 1;
-        if (this.availiableNumbersUser.some(x => x === num)) {
-            this.availiableNumbersUser = this.availiableNumbersUser.filter(x => x !== num);
-            return num;
-        }
-        else {
-            return this.generateNumberUser();
+    startLottery(times) {
+        while (times > 0) {
+            this.lotto();
+            times--;
         }
     }
-    generateNumberLotto() {
-        const num = Math.floor(Math.random() * 40) + 1;
-        if (this.availiableNumbersLotto.some(x => x === num)) {
-            this.availiableNumbersLotto = this.availiableNumbersLotto.filter(x => x !== num);
-            return num;
-        }
-        else {
-            return this.generateNumberLotto();
-        }
-    }
-    generateSixnumUser() {
-        const six = [this.generateNumberUser(),
-            this.generateNumberUser(), this.generateNumberUser(),
-            this.generateNumberUser(), this.generateNumberUser(),
-            this.generateNumberUser()];
-        return six;
-    }
-    generateSixnumLotto() {
-        const six = [this.generateNumberLotto(),
-            this.generateNumberLotto(), this.generateNumberLotto(),
-            this.generateNumberLotto(), this.generateNumberLotto(),
-            this.generateNumberLotto()];
-        return six;
+    lotto() {
+        setTimeout(() => {
+            this.lottery = new _models_Lottery__WEBPACK_IMPORTED_MODULE_2__["Lottery"]();
+            this.lottery.userNumbers = this.lottoService.generateSixNumbersFromFourty();
+            this.lottery.lotteryNumbers = this.lottoService.generateSixNumbersFromFourty();
+            this.lottery.iteration = this.iteration;
+            const match = this.lottoService.getNumbersMatch(this.lottery.lotteryNumbers, this.lottery.userNumbers);
+            const win = this.lottoService.getPriceFromMatch(match);
+            this.allTimeWinnings += win;
+            this.lottoService.addWinmodelWinnings(match, this.winmodel);
+            this.lottery.machCount = match;
+            this.iteration += 1;
+            this.lotteriesHistory.push(this.lottery);
+            this.allGamesTicket += this.ticketPrice;
+        }, 5);
     }
 };
+SixnumsComponent.ctorParameters = () => [
+    { type: _services_lotto_service__WEBPACK_IMPORTED_MODULE_4__["LottoService"] }
+];
 SixnumsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-sixnums',
@@ -391,7 +399,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\MaxSolisR\Desktop\lotto\Lotto\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\MaxSolisR\Desktop\lotto\solarizator4000\src\main.ts */"./src/main.ts");
 
 
 /***/ })
