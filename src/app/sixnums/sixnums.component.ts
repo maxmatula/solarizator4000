@@ -66,6 +66,6 @@ export class SixnumsComponent implements OnInit {
         this.iteration += 1;
         this.lotteriesHistory.push(this.lottery);
         this.allGamesTicket += this.ticketPrice;
-      }, 20);
+      }, 5);
   }
 }

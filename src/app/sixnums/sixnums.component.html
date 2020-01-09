@@ -2,31 +2,43 @@
   <h2>Witaj w loterii SIXNUMS!</h2>
   <hr>
   <p class="desc">WSZELKIE WYGRANE SĄ FIKCYJNE! <br>jest to tylko symulacja gry na 6 liczb aby pokazać
-  jaka jest szansa na wygraną :) <br> HCN = HajsCoin</p>
+    jaka jest szansa na wygraną :) <br> HCN = HajsCoin</p>
   <div class="mb-2 col-sm-12 mt-5">
     <div class="row">
       <div class="col-sm-4 text-center">
-        <p>Iteracja: {{iteration}} | Wygrana: <span class="badge badge-success">{{allTimeWinnings | number}} HCN</span></p>
+        <p>Iteracja: {{iteration}} | Wygrana: <span class="badge badge-success">{{allTimeWinnings | number}} HCN</span>
+        </p>
       </div>
       <div class="col-sm-4 text-center">
-       <p>Bilans: <span class="badge badge-secondary">{{allTimeWinnings - allGamesTicket | number}} HCN</span></p>
+        <p>Bilans: <span class="badge badge-secondary">{{allTimeWinnings - allGamesTicket | number}} HCN</span></p>
       </div>
       <div class="col-sm-4 text-center">
-          <p>Cena losu: {{ticketPrice}} HCN <br> Na wszystkie losy wydano <span class="badge badge-danger">{{allGamesTicket | number}} HCN</span></p>
-        </div>
+        <p>Cena losu: {{ticketPrice}} HCN <br> Na wszystkie losy wydano <span
+            class="badge badge-danger">{{allGamesTicket | number}} HCN</span></p>
+      </div>
     </div>
     <h3>Szóstka trafiona <span class="badge badge-success">{{winmodel.sixes}}</span> razy!</h3>
     <br>
     <div class="win-section">
       <p class="wincount">Jedynka: <span class="badge badge-danger">{{winmodel.ones}}</span> | Dwójka: <span
           class="badge badge-danger">{{winmodel.twos}}</span> | Trójka: <span
-          class="badge badge-danger">{{winmodel.threes}}</span></p>
-      <p class="wincount">Czwórka: <span class="badge badge-danger">{{winmodel.fours}}</span> | Piątka: <span
+          class="badge badge-danger">{{winmodel.threes}}</span> | Czwórka: <span class="badge badge-danger">{{winmodel.fours}}</span> | Piątka: <span
           class="badge badge-danger">{{winmodel.fives}}</span></p>
     </div>
   </div>
-  <p>Ile razy chcesz zagrać? <input type="number" min=1 max=100000 value="1" name="howManyPlay"
-      [(ngModel)]="howManyPlay"> <span class="textsmall"> (max. 100 000)</span></p>
-  <button class="btn btn-sm btn-warning mr-5" (click)="clear()">WYCZYŚĆ</button>
-  <button class="btn btn-lg btn-success" (click)="startLottery(howManyPlay)">GRAJ!</button>
+  <p>Ile razy chcesz zagrać?  <input type="number" min=1 max=100000 value="1" name="howManyPlay" [(ngModel)]="howManyPlay" class="form-control-sm"
+    disabled readonly> <span class="textsmall"> (max. 100 000)</span></p>
+    <div class="btn-group mb-3 fkd">
+      <button class="btn btn-sm btn-secondary" (click)="howManyPlay = 1">1</button>
+      <button class="btn btn-sm btn-secondary" (click)="howManyPlay = 100">100</button>
+      <button class="btn btn-sm btn-secondary" (click)="howManyPlay = 1000">1 000</button>
+      <button class="btn btn-sm btn-secondary" (click)="howManyPlay = 10000">10 000</button>
+      <button class="btn btn-sm btn-secondary" (click)="howManyPlay = 100000">100 000</button>
+    </div>
+  <br>
+  <div class="btn-group fkc">
+    <button class="btn btn-lg btn-warning" (click)="clear()">WYCZYŚĆ</button>
+    <button class="btn btn-lg btn-success" (click)="startLottery(howManyPlay)"> --- GRAJ ---</button>
+  </div>
+
 </div>
